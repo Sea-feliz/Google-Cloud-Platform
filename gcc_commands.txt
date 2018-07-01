@@ -1,0 +1,22 @@
+Google cloud computing command line interface commands
+
+
+Login auth
+$ gcloud auth login
+    This command use to get an authontication over the google cloud account
+
+Get a list of instances
+$ gcloud compute instances list
+	This command use to get the list of instances running on our account
+
+Output
+	NAME          ZONE        MACHINE_TYPE               PREEMPTIBLE  INTERNAL_IP  EXTERNAL_IP     STATUS
+gitlab        us-east1-b  custom (1 vCPU, 4.75 GiB)               							   TERMINATED
+jenkins       us-east1-b  n1-standard-1                           			                   TERMINATED
+nexus         us-east1-b  n1-standard-1                           			                   TERMINATED
+node1         us-east1-b  n1-standard-1                           			                   TERMINATED
+
+
+Using below command we can serch for an instance.
+$ gcloud  compute instances list | grep nexus
+nexus         us-east1-b  n1-standard-1                           			                   TERMINATED
