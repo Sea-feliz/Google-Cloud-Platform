@@ -20,3 +20,18 @@ node1         us-east1-b  n1-standard-1                           			           
 Using below command we can serch for an instance.
 $ gcloud  compute instances list | grep nexus
 nexus         us-east1-b  n1-standard-1                           			                   TERMINATED
+
+Start instance
+gcloud compute instances start <instance name> <zone> 
+$ gcloud compute instances start sonarqube --zone us-east1-b --quiet
+	This command use to start the service from command line interface
+
+Stop instance
+gcloud compute instances stop <instance name> <zone> 
+$ gcloud compute instances stop sonarqube --zone us-east1-b --quiet
+	This command use to stop the service from command line interface
+
+Delete instance
+gcloud compute instances delete <instance name> <zone> 
+$ gcloud compute instances delete sonarqube --zone us-east1-b --quiet
+	This command use to delete the service from command line interface
